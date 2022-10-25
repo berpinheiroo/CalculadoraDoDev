@@ -1,6 +1,10 @@
 var num1 = parseInt(prompt("Insira um numero"))
 var num2 = parseInt(prompt("Insira outro numero"))
 
+
+var pergunta = prompt("Qual operacao voce quer fazer? 1 = multiplicacao, 2 = divisao, 3 = soma, 4 = subtracao")
+
+if(pergunta == 3){
     SomaNum()
     var soma
     function SomaNum() {
@@ -8,7 +12,9 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return soma
     }
     console.log("O resultado da soma e:", soma)
+}
 
+if(pergunta == 4){
     SubNum()
     var sub
     function SubNum() {
@@ -16,7 +22,9 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return sub
     }
     console.log("O resultado da subtracao e: ", sub)
+}
 
+if(pergunta == 1){
     MultNum()
     var mult
     function MultNum() {
@@ -24,7 +32,9 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return mult
     }
     console.log("O resultado da multiplicacao e: ",mult)
+}
 
+if(pergunta == 2){
     DivNum()
     var div
     function DivNum() {
@@ -32,3 +42,4 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return div
     }
     console.log("O resultado da divisao e: ",DivNum())
+}
