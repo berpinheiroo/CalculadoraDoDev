@@ -1,37 +1,56 @@
-var num1 = parseInt(prompt("Insira um numero"))
-var num2 = parseInt(prompt("Insira outro numero"))
+var numA = parseInt(prompt("Insira um numero"))
+var numB = parseInt(prompt("Insira outro numero"))
+var resultados = []
+var index = 0
+var continuar = "s"
 
 
-var pergunta = prompt("Qual operacao voce quer fazer? 1 = multiplicacao, 2 = divisao, 3 = soma, 4 = subtracao")
 
-if(pergunta == 3){
-    function SomaNum() {
-        soma = num1 + num2
-        return soma
-    }
-    console.log("O resultado da soma e:", soma)
+function SomaNum(num1, num2) {
+    soma = num1 + num2
+    return soma
 }
 
-if(pergunta == 4){
-    function SubNum() {
-        sub = num1 - num2
-        return sub
-    }
-    console.log("O resultado da subtracao e: ", sub)
+
+function SubNum(num1, num2) {
+    sub = num1 - num2
+    return sub
 }
 
-if(pergunta == 1){
-    function MultNum() {
-        mult = num1 * num2
-        return mult
-    }
-    console.log("O resultado da multiplicacao e: ",mult)
+
+function MultNum(num1, num2) {
+    mult = num1 * num2
+    return mult
 }
 
-if(pergunta == 2){
-    function DivNum() {
-        div = num1 / num2
-        return div
-    }
-    console.log("O resultado da divisao e: ",DivNum())
+function DivNum(num1, num2) {
+    div = num1 / num2
+    return div
 }
+
+function ExibirHistorico() {
+    console.log(resultados)
+}
+
+while (continuar == "s") {
+    var operacao = prompt("Qual operacao voce quer fazer? 1 = multiplicacao, 2 = divisao, 3 = soma, 4 = subtracao")
+    if (operacao == "1") {
+        resultados[index] = MultNum(numA, numB)
+        index++
+        console.log("O resultado da multiplicacao e: ", MultNum(numA, numB))
+    } else if (operacao == "2") {
+        resultados[index] = DivNum(numA, numB)
+        index++
+        console.log("O resultado da divisao e: ",DivNum(numA, numB))
+    } else if (operacao == 3) {
+        resultados[index] = SomaNum(numA, numB)
+        index++
+        console.log("O resultado da soma e: ",SomaNum(numA, numB))
+    } else if (operacao == 4) {
+        resultados[index] = SubNum(numA, numB)
+        index++
+        console.log("O resultado da subtracao e: ",SubNum(numA, numB))
+    }
+    continuar = prompt("Deseja continuar fazendo operacoes?")
+}
+ExibirHistorico()
