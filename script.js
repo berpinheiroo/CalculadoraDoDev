@@ -24,3 +24,11 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return mult
     }
     console.log("O resultado da multiplicacao e: ",mult)
+
+    DivNum()
+    var div
+    function DivNum() {
+        div = num1 / num2
+        return div
+    }
+    console.log("O resultado da divisao e: ",DivNum())
