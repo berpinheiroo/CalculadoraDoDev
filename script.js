@@ -16,3 +16,11 @@ var num2 = parseInt(prompt("Insira outro numero"))
         return sub
     }
     console.log("O resultado da subtracao e: ", sub)
+
+    MultNum()
+    var mult
+    function MultNum() {
+        mult = num1 * num2
+        return mult
+    }
+    console.log("O resultado da multiplicacao e: ",mult)
